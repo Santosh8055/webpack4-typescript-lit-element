@@ -1,39 +1,23 @@
-import { customElement, html, LitElement, property } from 'lit-element';
+import { css, customElement, html, LitElement, property } from 'lit-element';
 
+// This decorator defines the element.
 @customElement('my-element')
 export class MyElement extends LitElement {
-  // Declare and initialize properties
-  @property({ type: String }) public prop1 = 'Hello World';
-  @property({ type: Number }) public prop2 = 5;
-  @property({ type: Boolean }) public prop3 = true;
-  @property({ type: Array }) public prop4 = [1, 2, 3];
-  @property({ type: Object }) public prop5 = { subprop1: 'hi', thing: 'fasdfsf' };
 
+  public static styles = css`
+    span {
+      color: green;
+    }
+  `;
+  // This decorator creates a property accessor that triggers rendering and
+  // an observed attribute.
+  @property()
+  public mood = 'great';
+
+  // Render element DOM by returning a `lit-html` template.
   public render() {
     return html`
-      <p>prop1: ${this.prop1}</p>
-      <p>prop2: ${this.prop2}</p>
-      <p>prop3: ${this.prop3}</p>
-
-      <p>
-        prop4:
-        ${this.prop4.map(
-          (item, index) =>
-            html`
-              <span>[${index}]:${item}&nbsp;</span>
-            `
-        )}
-      </p>
-
-      <p>
-        prop5:
-        ${Object.keys(this.prop5).map(
-          (item) =>
-            html`
-              <span>${item}: ${this.prop5[item]}&nbsp;</span>
-            `
-        )}
-      </p>
+      Web Components are <span>${this.mood}</span>!
     `;
   }
 }
