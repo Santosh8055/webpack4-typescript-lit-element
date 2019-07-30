@@ -31,18 +31,30 @@ yarn install
 yarn start:dev
 ```
 
-## Run tests
+Add your webcomponent under file src/web-components. Create a separate file for your webcomponent. Import your file in index.html under src folder.
+
+See example web component my-element.ts under src/web-components.
+
+Read more about [lit-element](https://lit-element.polymer-project.org/guide/start) web-components, [webpack](https://webpack.js.org/)
+
+## Build
 
 ```sh
-npm run test
+yarn build
+```
+
+## Production Build
+
+```sh
+yarn build:prod
 ```
 
 ## Author
 
 👤 **Santosh Pasupunuri**
 
-* Twitter: [@Santosh8055](https://twitter.com/Santosh8055)
-* Github: [@Santosh8055](https://github.com/Santosh8055)
+- Twitter: [@Santosh8055](https://twitter.com/Santosh8055)
+- Github: [@Santosh8055](https://github.com/Santosh8055)
 
 ## 🤝 Contributing
 
