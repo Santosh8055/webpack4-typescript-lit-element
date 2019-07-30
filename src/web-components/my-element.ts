@@ -12,7 +12,7 @@ export class MyElement extends LitElement {
   // This decorator creates a property accessor that triggers rendering and
   // an observed attribute.
   @property()
-  public mood = 'great';
+  public mood = 'cool!';
 
   // Render element DOM by returning a `lit-html` template.
   public render() {
