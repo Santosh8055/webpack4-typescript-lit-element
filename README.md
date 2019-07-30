@@ -31,7 +31,7 @@ yarn install
 yarn start:dev
 ```
 
-Add your webcomponent under file src/web-components. Create a separate file for your webcomponent. Import your file in index.ts under src folder.
+Add your webcomponent under file src/web-components. Create a separate file for your web component. Import your file in index.ts under src folder.
 
 See example web component my-element.ts under src/web-components.
 
